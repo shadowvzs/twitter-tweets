@@ -9,6 +9,12 @@
              * express (4.16.4)
              * twitter (1.7.1)
 
+---------------------------------------------
+
+Video: [youtube](https://drive.google.com/open?id=1opSxTmjus0P1TX-GFKeIdzchDMlBVII3)
+
+---------------------------------------------
+
 ### How to run (on debian/ubuntu) ?
 
 1. load docker image for **nodeJS** *([download image](https://drive.google.com/open?id=1opSxTmjus0P1TX-GFKeIdzchDMlBVII3))*
