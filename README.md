@@ -11,7 +11,9 @@
 
 ---------------------------------------------
 
-Video: [youtube](https://drive.google.com/open?id=1opSxTmjus0P1TX-GFKeIdzchDMlBVII3)
+
+Youtube: https://www.youtube.com/watch?v=_Cw6tPMWiT4
+[![Twitter Tweets video](http://img.youtube.com/vi/_Cw6tPMWiT4/0.jpg)](http://www.youtube.com/watch?v=_Cw6tPMWiT4)
 
 ---------------------------------------------
 
