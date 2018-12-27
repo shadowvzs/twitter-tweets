@@ -1,0 +1,310 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+body {
+    background: var(--body-bg);
+    font-family: var(--font-family)
+}
+
+.content {
+    position: relative;
+    top: 60px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 6px;
+    background: var(--navbar-bg);
+    text-align: center;
+    z-index: 1;
+}
+
+a.nav {
+    display: inline-block;
+    padding: 10px;
+    color: var(--nav-color);
+    transition: 0.3s ease;
+    text-shadow: 0 1px 2px var(--nav-shadow-color),
+                 0 -1px 2px var(--nav-shadow-color),
+                 -1px 0 2px var(--nav-shadow-color),
+                 1px 0 2px var(--nav-shadow-color);
+    font-size: 24px;
+    font-family: arial;
+    background: var(--nav-bg-color);
+    border: 1px solid var(--nav-border-color);
+    cursor: pointer;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+a.nav:first-child {
+    border-radius: 4px 0 0 4px;
+}
+
+a.nav:last-child {
+    border-radius: 0 4px 4px 0;
+}
+
+a.nav.selected {
+    box-shadow: var(--nav-selected-shadow);
+    color: var(--nav-selected-color);
+    border: 1px solid var(--nav-selected-border-color);
+    text-shadow: 0 1px 2px var(--nav-selected-shadow-color),
+                 0 -1px 2px var(--nav-selected-shadow-color),
+                 -1px 0 2px var(--nav-selected-shadow-color),
+                 1px 0 2px var(--nav-selected-shadow-color);
+}
+
+.twitter {
+    position: relative;
+    top: 40px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+}
+
+.twitter.draging {
+    cursor: move;
+}
+
+.timeline,
+.timeline-settings {
+    position: relative;
+    padding: 10px 20px;
+    border: 1px solid #000;
+    min-width: 120px;
+    min-height: 100px;
+    max-width: 320px;
+    margin: 10px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    border-radius: 10px;
+    background: var(--timeline-bg);
+    box-shadow: var(--timeline-shadow);
+}
+
+.timeline legend {
+    position: relative;
+    color: var(--timeline-h1-color);
+    font-size: 24px;
+    text-align: center;
+    font-style: italic;
+    text-shadow: 0 1px 1px var(--nav-selected-shadow-color),
+                0 -1px 1px var(--nav-selected-shadow-color),
+                -1px 0 1px var(--nav-selected-shadow-color),
+                1px 0 1px var(--nav-selected-shadow-color);
+    animation: loading-anim 1s infinite;
+}
+
+@keyframes loading-anim {
+    0%   {transform: translateX(0px)}
+    25%  {transform: translateX(1px)}
+    50%  {transform: translateX(-1px)}
+    75%  {transform: translateX(2px)}
+    100% {text-shadow: translateX(-2px)}
+}
+
+.timeline.draging {
+    opacity: 0.3;
+}
+
+.timeline .refresh,
+.timeline .close {
+    position: absolute;
+    top: 3px;
+    background: var(--timeline-refresh-bg);
+    border-radius: 4px;
+    font-family: fantasy;
+    font-size: 20px;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    color: var(--timeline-refresh-color);
+    border: 1px solid rgba(0,0,0,0.3);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 1),
+                 0 -1px 1px rgba(0, 0, 0, 1),
+                 -1px 0 1px rgba(0, 0, 0, 1),
+                 1px 0 1px rgba(0, 0, 0, 1);
+    padding: 4px;
+    transition: 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 20px;
+}
+
+.timeline .refresh {
+    left: 3px;
+}
+
+.timeline .close {
+    right: 3px;
+}
+
+.timeline .refresh:hover,
+.timeline .close:hover {
+  background: var(--timeline-refresh-hover-bg);
+}
+
+.timeline .refresh:active,
+.timeline .close:active {
+  color: var(--timeline-refresh-active-color);
+  background: var(--timeline-refresh-active-bg);
+}
+
+.timeline h1 a {
+    color: var(--timeline-h1-color);  /* theme part */
+}
+
+.timeline h1,
+.timeline-settings h3 {
+    color: var(--timeline-h1-color);
+    text-align: center;
+    margin-bottom: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.75),
+                 1px 0 1px rgba(0,0,0,0.75),
+                 0 -1px 1px rgba(0,0,0,0.75),
+                -1px 0 1px rgba(0,0,0,0.75),
+                5px 5px 5px rgba(0,0,0,0.5);
+}
+
+.tweet {
+    position: relative;
+    display: block;
+    border: 1px solid rgba(0,0,0,0.3);
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+    background: var(--tweet-bg);
+    font-family: var(--font-family);
+    font-size: 13px;
+}
+
+.tweet a {
+    color: #007;
+    transition: 0.3s ease;
+}
+
+.tweet a:hover {
+    text-shadow: 0 0 3px #000;
+}
+
+.tweet a.username {
+    display: block;
+    font-weight: 100;
+    font-size: 16px;
+    margin-bottom: 7px;
+}
+
+.tweet .username b {
+    font-weight: 900;
+}
+
+.tweet time {
+    display: block;
+    font-size: 11px;
+    text-align: right;
+}
+
+.settings {
+    position: relative;
+    top: 40px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.settings .misc {
+    position: relative;
+    display: inline-block;
+    border: 1px solid var(--misc-border-color);
+    background: var(--misc-bg);
+    box-shadow: var(--misc-shadow);
+    padding: 20px;
+    width: 240px;
+    margin: auto;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.settings .misc select {
+    font-family: var(--font-family);
+    padding: 3px 6px;
+    width: 200px;
+}
+
+.settings .misc p {
+    position: relative;
+    margin-top: 10px;
+    font-style: italic;
+    font-size: 12px;
+    color: var(--timelinesettings-label-color);
+    line-height:  12px;
+
+}
+
+.timelines-settings {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.timeline-settings {
+    position: relative;
+    min-width: 200px;
+    min-height: 100px;
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 10px;
+}
+
+.timeline-settings h3 {
+    margin: 10px 0;
+}
+
+.settings input {
+    padding: 3px 8px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    background: var(--timelinesettings-input-bg);
+}
+
+.settings label {
+    color: var(--timelinesettings-label-color);
+}
+
+.settings .misc input {
+    width: 100px;
+    margin: 10px 10px 20px 10px;
+}
+
+.wait, .wait * {
+    cursor: wait !important;
+}
+
+.table-row {
+    display: table-row;
+}
+
+.table-row * {
+    display: table-cell;
+}

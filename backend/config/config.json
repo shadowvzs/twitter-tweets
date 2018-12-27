@@ -1,0 +1,6 @@
+{
+  "consumer_key": "enter your twitter customer key",
+  "consumer_secret": "enter your twitter customer secret",
+  "access_token_key": "enter your twitter access token key",
+  "access_token_secret": "enter your twitter access secret"
+}
