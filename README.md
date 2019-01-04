@@ -11,8 +11,8 @@
 
 ---------------------------------------------
 
-Live (if you are lucky :D): https://mytwittertweets.herokuapp.com/
-Youtube: https://www.youtube.com/watch?v=_Cw6tPMWiT4
+* Live (if you are lucky :D): https://mytwittertweets.herokuapp.com/
+* Youtube: https://www.youtube.com/watch?v=_Cw6tPMWiT4
 [![Twitter Tweets video](http://img.youtube.com/vi/_Cw6tPMWiT4/0.jpg)](http://www.youtube.com/watch?v=_Cw6tPMWiT4)
 
 ---------------------------------------------
